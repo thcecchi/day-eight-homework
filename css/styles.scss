@@ -70,6 +70,7 @@ body {
     color: white;
     background-color: red;
     border-bottom: 3px solid gray;
+    line-height: 2em;
 
     // &::before {
     //   content: '-';
@@ -159,6 +160,8 @@ body {
 
     &Lance {
       background: url(../imgs/sk8er-4.png);
+      background-size: 124%;
+      background-position: 100% 20%;
       display: inline-block;
       width: 32%;
       height: 125px;
@@ -169,6 +172,8 @@ body {
 
     &Rodney {
       background: url(../imgs/sk8er-3.png);
+      background-size: 116%;
+      background-position: 4% 20%;
       display: inline-block;
       width: 32%;
       height: 125px;
@@ -179,6 +184,8 @@ body {
 
     &Tommy {
       background: url(../imgs/sk8er-2.png);
+      background-size: 287%;
+      background-position: 79% 20%;
       display: inline-block;
       float: right;
       width: 32%;
@@ -189,6 +196,8 @@ body {
 
     &Steve {
       background: url(../imgs/sk8er-1.png);
+      background-size: 101%;
+      background-position: 61% 102%;
       display: inline-block;
       width: 66%;
       height: 150px;
