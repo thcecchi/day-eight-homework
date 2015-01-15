@@ -2,7 +2,8 @@ body {
   margin: 0;
   padding: 0;
   background: url('../imgs/bg.jpg');
-  background-size: contain;
+  background-size: 100%;
+  background-position: 100% 0%;
   font-family: sans-serif; }
 
 .mainWrapper {
