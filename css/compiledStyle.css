@@ -31,8 +31,8 @@ body {
   margin-bottom: 0; }
   .socialIcons li {
     display: inline-block;
-    color: lightgray;
-    height: 20px;
+    color: #E3E3E3;
+    height: 25px;
     width: 30px;
     padding-top: 5%;
     border-bottom: 3px solid gray; }
@@ -46,7 +46,8 @@ body {
       background-color: #E03A3A; }
   .socialIcons i {
     display: block;
-    text-align: center; }
+    text-align: center;
+    font-size: 22px; }
 
 .navBar {
   width: 100%;
@@ -168,7 +169,7 @@ body {
       height: 284px;
       border: 2px solid white;
       float: right;
-      border-bottom: 3px solid gray; }
+      line-height: 180px; }
     .skaters .bioSteve {
       background: url(../imgs/sk8er-1.png);
       background-size: 101%;
@@ -178,8 +179,7 @@ body {
       height: 150px;
       border: 2px solid white;
       float: left;
-      margin-top: 5px;
-      border-bottom: 3px solid gray; }
+      margin-top: 5px; }
 
 .decks {
   width: 100%;
@@ -189,9 +189,33 @@ body {
   -webkit-justify-content: space-around;
   border-bottom: 3px solid gray;
   padding: 10px 0; }
-  .decks .deckImg {
-    width: 6%;
-    height: 150px; }
+  .decks .imgContainer {
+    width: 6%; }
+    .decks .imgContainer .deckImg {
+      height: 150px; }
+    .decks .imgContainer span {
+      display: none; }
+    .decks .imgContainer:hover > span {
+      font-size: 10px;
+      display: inline-block;
+      position: absolute;
+      padding: .5em;
+      content: attr(title);
+      min-width: 120px;
+      text-align: center;
+      width: auto;
+      height: auto;
+      white-space: nowrap;
+      bottom: -325px;
+      background: rgba(0, 0, 0, 0.8);
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      color: #fff;
+      padding-bottom: 0;
+      margin-bottom: 0;
+      z-index: 1;
+      margin-left: -30px; }
 
 .contact {
   width: 100%;
@@ -220,8 +244,8 @@ body {
       width: auto; }
       .contact .info ul li {
         display: inline-block;
-        color: lightgray;
-        height: 20px;
+        color: #E3E3E3;
+        height: 25px;
         width: 30px;
         padding-top: 5%;
         border-bottom: 3px solid gray;
@@ -230,7 +254,8 @@ body {
       .contact .info ul i {
         display: block;
         text-align: center;
-        color: lightgray; }
+        color: lightgray;
+        font-size: 22px; }
   .contact form {
     display: inline-block; }
     .contact form input[type=text] {
@@ -248,3 +273,27 @@ body {
       margin-left: 40%; }
     .contact form #largeField {
       height: 50px; }
+
+@media screen and (max-width: 800px) {
+  .navBar .navButtons {
+    display: block; }
+  .navBar li {
+    display: block;
+    width: 100%;
+    line-height: 2em;
+    margin-top: 5px; }
+  .news {
+    width: 100%;
+    display: block; }
+    .news .article {
+      width: 100%;
+      display: block;
+      box-sizing: border-box; }
+      .news .article h1 {
+        padding-top: 10px;
+        font-size: 1em; }
+  .bio {
+    display: block; }
+    .bioLance {
+      width: 100%;
+      display: block; } }
