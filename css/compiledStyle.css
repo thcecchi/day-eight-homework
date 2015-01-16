@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: url('../imgs/bg.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../imgs/bg.jpg');
   background-size: 100%;
   background-position: 100% 0%;
   font-family: sans-serif; }
@@ -27,7 +27,8 @@ body {
 .socialIcons {
   display: inline-block;
   width: auto;
-  padding-left: 0; }
+  padding-left: 0;
+  margin-bottom: 0; }
   .socialIcons li {
     display: inline-block;
     color: lightgray;
@@ -36,21 +37,20 @@ body {
     padding-top: 5%;
     border-bottom: 3px solid gray; }
     .socialIcons li#facebook {
-      background-color: blue; }
+      background-color: #14568C; }
     .socialIcons li#rss {
-      background-color: yellow; }
+      background-color: #B39C0B; }
     .socialIcons li#twitter {
-      background-color: lightblue; }
+      background-color: #91C7F2; }
     .socialIcons li#youtube {
-      background-color: red; }
+      background-color: #E03A3A; }
   .socialIcons i {
     display: block;
     text-align: center; }
 
 .navBar {
   width: 100%;
-  display: block;
-  border: 1px red dashed; }
+  display: block; }
   .navBar .navButtons {
     padding: 0;
     width: 100%;
@@ -61,8 +61,8 @@ body {
     display: inline-block;
     width: 24%;
     font-size: 12px;
-    color: white;
-    background-color: red;
+    color: lightgray;
+    background-color: #BD2C04;
     border-bottom: 3px solid gray;
     line-height: 2em; }
     .navBar li::before {
@@ -77,17 +77,25 @@ body {
       margin-right: -8%; }
 
 .slider {
-  border: 5px solid white;
   display: block; }
   .slider .sliderMain {
     height: 200px;
-    background: url(../imgs/top-image.png);
+    background: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url(../imgs/top-image.png);
     background-size: 112%;
-    background-position: -110% 20%; }
+    background-position: -110% 20%;
+    border: 5px solid white; }
   .slider img {
     width: 45%;
     margin-top: 4%;
     margin-left: 3%; }
+  .slider .sliderButtons {
+    display: -webkit-flex;
+    -webkit-justify-content: space-around; }
+    .slider .sliderButtons li {
+      display: inline-block;
+      width: auto;
+      font-size: 12px;
+      color: white; }
 
 .news {
   width: 100%;
@@ -112,7 +120,7 @@ body {
       padding-right: 10%;
       box-sizing: border-box; }
     .news .article .readMore {
-      color: red;
+      color: #BD2C04;
       text-align: center;
       font-weight: bold; }
 
@@ -159,7 +167,8 @@ body {
       width: 32%;
       height: 284px;
       border: 2px solid white;
-      float: right; }
+      float: right;
+      border-bottom: 3px solid gray; }
     .skaters .bioSteve {
       background: url(../imgs/sk8er-1.png);
       background-size: 101%;
@@ -169,7 +178,8 @@ body {
       height: 150px;
       border: 2px solid white;
       float: left;
-      margin-top: 5px; }
+      margin-top: 5px;
+      border-bottom: 3px solid gray; }
 
 .decks {
   width: 100%;
@@ -229,7 +239,7 @@ body {
       margin-bottom: 10px;
       height: 15px; }
     .contact form input[type=button] {
-      background: red;
+      background: #BD2C04;
       border: none;
       color: white;
       width: 150px;

@@ -8,16 +8,21 @@
   border-bottom: 3px solid gray;
 }
 
-@mixin postCoverMixin ($imgPath: none, $rgba1: rgba(30, 144, 255, 0.45), $rgba2: rgba(30, 144, 255, 0.45)) {
-  background: linear-gradient($rgba1, $rgba2), $imgPath;
-}
+$dkblue: #14568C;
+$ltred: #E03A3A;
+$red: #BD2C04;
+$yellow: #B39C0B;
+$ltblue: #91C7F2;
 
 // -----------------Styles-------------------
 
 body {
   margin: 0;
   padding: 0;
-  background: url('../imgs/bg.jpg');
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.65)
+    ), url('../imgs/bg.jpg');
   background-size: 100%;
   background-position: 100% 0%;
   font-family: sans-serif;
@@ -49,24 +54,25 @@ body {
     display: inline-block;
     width: auto;
     padding-left: 0;
+    margin-bottom: 0;
 
   li {
     @include socialButton;
 
     &#facebook {
-      background-color: blue;
+      background-color: $dkblue;
     }
 
     &#rss {
-      background-color: yellow;
+      background-color: $yellow;
     }
 
     &#twitter {
-      background-color: lightblue;
+      background-color: $ltblue;
     }
 
     &#youtube {
-      background-color: red;
+      background-color: $ltred;
     }
   }
 
@@ -79,7 +85,6 @@ body {
 .navBar {
   width: 100%;
   display: block;
-  border: 1px red dashed;
 
   .navButtons {
     padding: 0;
@@ -93,8 +98,8 @@ body {
     display: inline-block;
     width: 24%;
     font-size: 12px;
-    color: white;
-    background-color: red;
+    color: lightgray;
+    background-color: $red;
     border-bottom: 3px solid gray;
     line-height: 2em;
 
@@ -115,20 +120,35 @@ body {
 }
 
 .slider {
-  border: 5px solid white;
   display: block;
 
   .sliderMain {
     height: 200px;
-    background: url(../imgs/top-image.png);
+    background: linear-gradient(
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.25)
+    ), url(../imgs/top-image.png);
     background-size: 112%;
     background-position: -110% 20%;
+    border: 5px solid white;
   }
 
   img {
     width: 45%;
     margin-top: 4%;
     margin-left: 3%;
+  }
+
+  .sliderButtons {
+    display: -webkit-flex;
+    -webkit-justify-content: space-around;
+
+    li {
+      display: inline-block;
+      width: auto;
+      font-size: 12px;
+      color: white;
+    }
   }
 }
 
@@ -161,7 +181,7 @@ body {
     }
 
     .readMore {
-      color: red;
+      color: $red;
       text-align: center;
       font-weight: bold;
     }
@@ -220,6 +240,7 @@ body {
       height: 284px;
       border: 2px solid white;
       float: right;
+      border-bottom: 3px solid gray;
     }
 
     &Steve {
@@ -232,6 +253,7 @@ body {
       border: 2px solid white;
       float: left;
       margin-top: 5px;
+      border-bottom: 3px solid gray;
     }
   }
 }
@@ -310,7 +332,7 @@ body {
     }
 
     input[type=button] {
-      background: red;
+      background: $red;
       border: none;
       color: white;
       width: 150px;
