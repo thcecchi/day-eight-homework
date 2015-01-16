@@ -1,12 +1,18 @@
-@mixin socialButton ($color) {
+@mixin socialButton () {
   display: inline-block;
-  background-color: $color;
-  color: white;
+  // background-color: $color;
+  color: lightgray;
   height: 20px;
-  width: 20px;
+  width: 30px;
   padding-top: 5%;
   border-bottom: 3px solid gray;
 }
+
+@mixin postCoverMixin ($imgPath: none, $rgba1: rgba(30, 144, 255, 0.45), $rgba2: rgba(30, 144, 255, 0.45)) {
+  background: linear-gradient($rgba1, $rgba2), $imgPath;
+}
+
+// -----------------Styles-------------------
 
 body {
   margin: 0;
@@ -14,7 +20,6 @@ body {
   background: url('../imgs/bg.jpg');
   background-size: 100%;
   background-position: 100% 0%;
-  // background-size: contain;
   font-family: sans-serif;
 }
 
@@ -22,6 +27,7 @@ body {
   width: 50%;
   margin-left: 25%;
   margin-right: 25%;
+  padding-bottom: 25px;
 }
 
 .socialBar {
@@ -35,15 +41,33 @@ body {
     font-size: 12px;
     display: inline-block;
     color: white;
+    padding-right: 50px;
   }
 }
 
 .socialIcons {
     display: inline-block;
     width: auto;
+    padding-left: 0;
 
   li {
-    @include socialButton(red)
+    @include socialButton;
+
+    &#facebook {
+      background-color: blue;
+    }
+
+    &#rss {
+      background-color: yellow;
+    }
+
+    &#twitter {
+      background-color: lightblue;
+    }
+
+    &#youtube {
+      background-color: red;
+    }
   }
 
   i {
@@ -68,23 +92,25 @@ body {
   li {
     display: inline-block;
     width: 24%;
-    font-size: 14px;
+    font-size: 12px;
     color: white;
     background-color: red;
     border-bottom: 3px solid gray;
     line-height: 2em;
 
-    // &::before {
-    //   content: '-';
-    //   font-weight: bold;
-    //   padding-right: 7%;
-    // }
-    //
-    // &::after {
-    //   content: '-';
-    //   font-weight: bold;
-    //   padding-left: 7%;
-    // }
+    &::before {
+      content: '-';
+      font-weight: bold;
+      margin-right: 8%;
+      margin-left: -8%;
+    }
+
+    &::after {
+      content: '-';
+      font-weight: bold;
+      margin-left: 8%;
+      margin-right: -8%;
+    }
   }
 }
 
@@ -232,6 +258,7 @@ body {
   display: block;
   background: white;
   margin-top: 10px;
+  border-bottom: 3px solid gray;
 
   .info {
     display: inline-block;
@@ -259,8 +286,9 @@ body {
         width: auto;
 
         li {
-          @include socialButton(gray);
+          @include socialButton;
           border-bottom: none;
+          background-color: gray
         }
 
         i {
