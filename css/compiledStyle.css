@@ -36,6 +36,8 @@ body {
     width: 30px;
     padding-top: 5%;
     border-bottom: 3px solid gray; }
+    .socialIcons li:hover {
+      border-bottom: 3px solid #B39C0B; }
     .socialIcons li#facebook {
       background-color: #14568C; }
     .socialIcons li#rss {
@@ -76,6 +78,8 @@ body {
       font-weight: bold;
       margin-left: 8%;
       margin-right: -8%; }
+    .navBar li:hover {
+      border-bottom: 3px solid #B39C0B; }
 
 .slider {
   display: block; }
@@ -124,6 +128,8 @@ body {
       color: #BD2C04;
       text-align: center;
       font-weight: bold; }
+      .news .article .readMore:hover {
+        color: #B39C0B; }
 
 .skaters {
   width: 100%;
@@ -137,6 +143,8 @@ body {
   .skaters h1 {
     display: block;
     margin-top: 18%; }
+    .skaters h1:hover {
+      color: #B39C0B; }
   .skaters .bio {
     border: 3px solid white; }
     .skaters .bioLance {
@@ -292,8 +300,74 @@ body {
       .news .article h1 {
         padding-top: 10px;
         font-size: 1em; }
-  .bio {
-    display: block; }
-    .bioLance {
-      width: 100%;
-      display: block; } }
+  .skaters .bioLance {
+    width: 100%;
+    display: block;
+    clear: both;
+    float: none;
+    margin: 0;
+    margin-top: 5px;
+    margin-right: 0; }
+  .skaters .bioRodney {
+    width: 100%;
+    display: block;
+    clear: both;
+    float: none;
+    margin: 0;
+    margin-top: 5px;
+    margin-left: 0; }
+  .skaters .bioTommy {
+    width: 100%;
+    display: block;
+    clear: both;
+    float: none;
+    margin: 0;
+    margin-top: 5px;
+    line-height: 0;
+    height: 125px;
+    background-size: 186%; }
+  .skaters .bioSteve {
+    width: 100%;
+    display: block;
+    clear: both;
+    float: none;
+    margin: 0;
+    margin-top: 5px;
+    height: 125px; }
+  .decks {
+    margin-top: 10px;
+    -webkit-flex-direction: column; }
+    .decks .imgContainer {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      height: 200px;
+      margin-top: -100px;
+      width: auto; }
+      .decks .imgContainer .deckImg {
+        -ms-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        height: 150%; }
+  .contact .info {
+    width: 100%;
+    padding-top: 10px; }
+    .contact .info h4 {
+      font-size: 1em; }
+    .contact .info ul {
+      margin-left: auto;
+      margin-right: auto; }
+      .contact .info ul li:hover {
+        background-color: #B39C0B; }
+  .contact form {
+    width: 100%; }
+    .contact form input[type=text] {
+      margin-left: 10%;
+      width: 80%;
+      height: 25px; }
+    .contact form input[type=button] {
+      width: 80%;
+      height: 40px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px; } }

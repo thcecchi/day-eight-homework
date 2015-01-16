@@ -8,6 +8,15 @@
   border-bottom: 3px solid gray;
 }
 
+@mixin blockBio () {
+  width: 100%;
+  display: block;
+  clear: both;
+  float: none;
+  margin: 0;
+  margin-top: 5px;
+}
+
 $dkblue: #14568C;
 $ltred: #E03A3A;
 $red: #BD2C04;
@@ -59,6 +68,10 @@ body {
   li {
     @include socialButton;
 
+    &:hover {
+      border-bottom: 3px solid $yellow;
+    }
+
     &#facebook {
       background-color: $dkblue;
     }
@@ -74,6 +87,7 @@ body {
     &#youtube {
       background-color: $ltred;
     }
+
   }
 
   i {
@@ -116,6 +130,10 @@ body {
       font-weight: bold;
       margin-left: 8%;
       margin-right: -8%;
+    }
+
+    &:hover {
+      border-bottom: 3px solid $yellow;
     }
   }
 }
@@ -185,6 +203,10 @@ body {
       color: $red;
       text-align: center;
       font-weight: bold;
+
+      &:hover {
+        color: $yellow;
+      }
     }
   }
 }
@@ -202,6 +224,10 @@ body {
   h1 {
     display: block;
     margin-top: 18%;
+
+    &:hover {
+      color: $yellow;
+    }
   }
 
   .bio {
@@ -408,14 +434,95 @@ body {
     }
   }
 
-  .bio {
-    display: block;
+  .skaters {
 
-    &Lance {
-      width: 100%;
-      display: block;
+    .bio {
+
+      &Lance {
+        @include blockBio;
+        margin-right: 0;
+      }
+
+      &Rodney {
+        @include blockBio;
+        margin-left: 0;
+      }
+
+      &Tommy {
+        @include blockBio;
+        line-height: 0;
+        height: 125px;
+        background-size: 186%;
+      }
+
+      &Steve {
+        @include blockBio;
+        height: 125px;
+      }
     }
-
   }
 
+  .decks {
+
+    margin-top: 10px;
+    -webkit-flex-direction: column;
+
+    .imgContainer {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      height: 200px;
+      margin-top: -100px;
+      width: auto;
+
+      .deckImg {
+        -ms-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        height: 150%;
+      }
+    }
+  }
+
+  .contact {
+
+    .info {
+      width: 100%;
+      padding-top: 10px;
+
+      h4 {
+        font-size: 1em;
+      }
+
+      ul {
+        margin-left: auto;
+        margin-right: auto;
+
+        li {
+
+          &:hover {
+            background-color: $yellow;
+          }
+        }
+      }
+    }
+
+    form {
+      width:100%;
+
+      input[type=text] {
+        margin-left: 10%;
+        width: 80%;
+        height: 25px
+      }
+
+      input[type=button] {
+        width: 80%;
+        height: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+      }
+    }
+  }
 }
